@@ -35,18 +35,18 @@
             <h3 class="headline headline--small">Learn</h3>
             <nav class="nav-list">
               <?php
-                wp_nav_menu(array(
+                /*wp_nav_menu(array(
                   'theme_location' =>'footerLocationTwo'
                   ))
-              ?>
-              <!--
+              */?>
+              
               <ul>
                 <li><a href="#">Legal</a></li>
                 <li><a href="#">Privacy</a></li>
                 <li><a href="#">Careers</a></li>
               </ul>
               
-              -->
+              
             </nav>
           </div>
         </div>
