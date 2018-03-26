@@ -18,8 +18,8 @@ wp-content/plugins/hello.php
 
 wp-config.php
 
-# Ignore everything in the "wp-content" directory, except the "plugins"
-# and "themes" directories.
+# Ignore everything in the "wp-content" directory, except the "plugins",
+# "themes" and "mu-plugins" directories.
 wp-content/*
 !wp-content/plugins/
 !wp-content/mu-plugins/
