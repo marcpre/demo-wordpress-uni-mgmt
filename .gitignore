@@ -16,7 +16,7 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
-wp-conig.php
+wp-config.php
 
 # Ignore everything in the "wp-content" directory, except the "plugins"
 # and "themes" directories.
