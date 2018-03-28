@@ -38,5 +38,6 @@ See minimum example below:
 * Advanced Custom Fields (ACF)
 * CMB2
 
+##Get Google Maps API Key
 
---> Stopped at 44
+Visit the (google maps api url)[https://developers.google.com/maps/documentation/javascript/get-api-key] and click `Get API Key`
