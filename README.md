@@ -1,6 +1,6 @@
 # demo-wordpress-uni-mgmt
 
-##Custom Queries
+## Custom Queries
 
 See minimum example below:
 
@@ -31,9 +31,13 @@ See minimum example below:
 ```
 
 
-##If you create new post type
+## If you create new post type
 *  Update permalink structure
 
-##Custom Field Plugins
+## Custom Field Plugins
 * Advanced Custom Fields (ACF)
 * CMB2
+
+## Get Google Maps API Key
+
+Visit the [google maps api url](https://developers.google.com/maps/documentation/javascript/get-api-key) and click `Get API Key`
