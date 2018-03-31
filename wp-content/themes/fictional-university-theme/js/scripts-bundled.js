@@ -13614,10 +13614,10 @@ function () {
   function Search() {
     _classCallCheck(this, Search);
 
+    alert("Lolonator!!!!");
     this.openButton = (0, _jquery.default)(".js-search-trigger");
     this.closeButton = (0, _jquery.default)(".search-overlay__close");
     this.searchOverlay = (0, _jquery.default)(".search-overlay");
-    alert("Hello");
     this.events();
   } // 2. events
 
@@ -13627,17 +13627,25 @@ function () {
     value: function events() {
       this.openButton.on("click", this.openOverlay.bind(this));
       this.closeButton.on("click", this.closeOverlay.bind(this));
+      (0, _jquery.default)(document).on("keyUp", this.keyPressDispatcher.bind(this));
     } // 3. methods (function, action...)
 
+  }, {
+    key: "keyPressDispatcher",
+    value: function keyPressDispatcher() {
+      console.log("test");
+    }
   }, {
     key: "openOverlay",
     value: function openOverlay() {
       this.searchOverlay.addClass("search-overlay--active");
+      (0, _jquery.default)("body").addClass("body-no-scroll");
     }
   }, {
     key: "closeOverlay",
     value: function closeOverlay() {
       this.searchOverlay.removeClass("search-overlay--active");
+      (0, _jquery.default)("body").removeClass("body-no-scroll");
     }
   }]);
 
