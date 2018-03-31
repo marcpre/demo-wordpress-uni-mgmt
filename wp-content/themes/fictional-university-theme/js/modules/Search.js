@@ -6,6 +6,7 @@ class Search {
     this.openButton = $(".js-search-trigger");
     this.closeButton = $(".search-overlay__close");
     this.searchOverlay = $(".search-overlay");
+    alert("Hello")
     this.events();
   }
 
@@ -15,7 +16,6 @@ class Search {
     this.closeButton.on("click", this.closeOverlay.bind(this));
   }
   
-
   // 3. methods (function, action...)
   openOverlay() {
     this.searchOverlay.addClass("search-overlay--active");
