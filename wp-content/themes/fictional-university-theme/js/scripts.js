@@ -13,5 +13,3 @@ var mobileMenu = new MobileMenu();
 var heroSlider = new HeroSlider();
 var googleMap = new GoogleMap();
 var search = new Search();
-
-alert("this is a javascript test")
