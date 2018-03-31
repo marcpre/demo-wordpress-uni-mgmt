@@ -10351,6 +10351,7 @@ var mobileMenu = new _MobileMenu.default();
 var heroSlider = new _HeroSlider.default();
 var googleMap = new _GoogleMap.default();
 var search = new _Search.default();
+alert("this is a javascript test");
 
 /***/ }),
 /* 2 */
@@ -13619,6 +13620,7 @@ function () {
     this.closeButton = (0, _jquery.default)(".search-overlay__close");
     this.searchOverlay = (0, _jquery.default)(".search-overlay");
     this.events();
+    this.isOverlayOpen = false;
   } // 2. events
 
 
@@ -13627,25 +13629,33 @@ function () {
     value: function events() {
       this.openButton.on("click", this.openOverlay.bind(this));
       this.closeButton.on("click", this.closeOverlay.bind(this));
-      (0, _jquery.default)(document).on("keyUp", this.keyPressDispatcher.bind(this));
+      (0, _jquery.default)(document).on("keyup", this.keyPressDispatcher.bind(this));
     } // 3. methods (function, action...)
 
   }, {
     key: "keyPressDispatcher",
-    value: function keyPressDispatcher() {
-      console.log("test");
+    value: function keyPressDispatcher(e) {
+      if (e.keyCode() == 83 && !this.isOverlayOpen) {
+        this.openOverlay();
+      }
+
+      if (e.keyCode() == 87 && this.isOverlayOpen) {
+        this.closeOverlay();
+      }
     }
   }, {
     key: "openOverlay",
     value: function openOverlay() {
       this.searchOverlay.addClass("search-overlay--active");
       (0, _jquery.default)("body").addClass("body-no-scroll");
+      this.isOverlayOpen = true;
     }
   }, {
     key: "closeOverlay",
     value: function closeOverlay() {
       this.searchOverlay.removeClass("search-overlay--active");
       (0, _jquery.default)("body").removeClass("body-no-scroll");
+      this.isOverlayOpen = false;
     }
   }]);
 
