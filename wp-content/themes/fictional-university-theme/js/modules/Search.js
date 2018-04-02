@@ -24,7 +24,6 @@ class Search {
     this.searchField.on("keyup", this.typingLogic.bind(this));
   }
   
-
   // 3. methods (function, action...)
   typingLogic() {
     if (this.searchField.val() != this.previousValue) {
