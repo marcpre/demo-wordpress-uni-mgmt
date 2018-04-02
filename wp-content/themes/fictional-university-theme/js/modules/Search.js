@@ -23,7 +23,7 @@ class Search {
     $(document).on("keydown", this.keyPressDispatcher.bind(this));
     this.searchField.on("keyup", this.typingLogic.bind(this));
   }
-  
+
   // 3. methods (function, action...)
   typingLogic() {
     if (this.searchField.val() != this.previousValue) {
@@ -49,7 +49,7 @@ class Search {
     $.when(
       $.getJSON(universityData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val()),
       $.getJSON(universityData.root_url + '/wp-json/wp/v2/pages?search=' + this.searchField.val())
-      ).then((posts, pages) => {
+    ).then((posts, pages) => {
       var combinedResults = posts[0].concat(pages[0]);
       this.resultsDiv.html(`
         <h2 class="search-overlay__section-title">General Information</h2>
