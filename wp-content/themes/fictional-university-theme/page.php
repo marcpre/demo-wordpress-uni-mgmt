@@ -3,15 +3,12 @@
   get_header();
 
   while(have_posts()) {
-    the_post(); 
-    pageBanner(array(
-      'title' => 'Hello, there this is the title.',
-      'subtitle' => 'This is the subtitle', 
-      'photo' => 'http://en.wikipedia.org/wiki/Hill#/media/File:Rolling_Hills_Paranal.jpg'
-      ));
+    the_post();
+    pageBanner();
+     ?>
     
-    ?>
-  
+    
+
     <div class="container container--narrow page-section">
     
     <?php
