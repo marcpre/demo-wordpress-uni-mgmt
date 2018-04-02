@@ -1,5 +1,7 @@
 <?php
 
+require get_theme_file_path('/inc/search-route.php');
+
 //Extend REST API
 function university_custom_rest()
 {
