@@ -79,7 +79,7 @@
               get_template_part('template-parts/content','event');
         }
         }
-      wp_reset_postdate();
+      wp_reset_postdata();
       $relatedCampuses = get_field('related_campuses');
       if($relatedCampuses) {
         echo '<h2 class="headline headline--medium">' . get_the_title() .' is Available At These Campuses: </h2>';
