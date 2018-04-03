@@ -58,16 +58,30 @@ class Search {
           </div>
           <div class="one-third">
               <h2 class="search-overlay__section-title">Programs</h2>
-              
+              ${results.programs.length ? '<ul class="link-list min-list">' : `<p>No programs matches that search. <a href="${universityData.root_url} + '/programs">View all programs</a></p>`}
+              ${results.programs.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.postType == 'post' ? `by ${item.authorName}` : ''}</li>`).join('')}
+              ${results.programs.length ? '</ul>' : ''}              
               <h2 class="search-overlay__section-title">Professors</h2>
+              ${results.professors.length ? '<ul class="professor-cards">' : `<p>No programs matches that search.</p>`}
+              ${results.professors.map(item => `
+                          <li class="professor-card__list-item">
+            <a class="professor-card" href="${item.permalink}">
+              <img class="professor-card__image" src="${item.image}">
+              <span class="professor-card__name">${item.title}</span>
+            </a>
+          </li>` : ''}</li>`).join('')}
+              ${results.professors.length ? '</ul>' : ''}  
           </div>
           <div class="one-third">
               <h2 class="search-overlay__section-title">Campuses</h2>
-              
+              ${results.campuses.length ? '<ul class="link-list min-list">' : `<p>No programs matches that search. <a href="${universityData.root_url} + '/campuses">View all campuses</a></p>`}
+              ${results.campuses.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.postType == 'post' ? `by ${item.authorName}` : ''}</li>`).join('')}
+              ${results.campuses.length ? '</ul>' : ''}                   
               <h2 class="search-overlay__section-title">Events</h2>
           </div>
         </div>
       `)
+      this.isSpinnerVisible = false
     })
   }
 
