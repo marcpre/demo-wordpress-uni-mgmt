@@ -12,8 +12,6 @@
     pageBanner();
      ?>
     
-    
-
     <div class="container container--narrow page-section">
       <ul class="min-list link-list" id="my-notes">
         <?php 
