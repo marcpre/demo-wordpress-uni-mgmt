@@ -59,6 +59,7 @@ class MyNotes {
   updateNote(e) {
     var thisNote = $(e.target).parents("li");
 
+    //update note property
     var ourUpdatedPost = {
       'title': thisNote.find(".note-title-field").val(),
       'content': thisNote.find(".note-body-field").val()
