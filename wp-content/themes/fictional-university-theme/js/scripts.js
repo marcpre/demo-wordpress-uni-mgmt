@@ -17,4 +17,3 @@ var googleMap = new GoogleMap();
 var search = new Search();
 var myNotes = new MyNotes();
 var like = new Like();
-
