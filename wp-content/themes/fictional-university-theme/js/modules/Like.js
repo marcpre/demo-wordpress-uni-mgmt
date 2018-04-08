@@ -12,8 +12,8 @@ class Like {
   // methods
   ourClickDispatcher(e) {
     var currentLikeBox = $(e.target).closest(".like-box");
-    
-    
+
+
     if (currentLikeBox.data('exists') == 'yes') {
       this.deleteLike(currentLikeBox);
     } else {
@@ -23,6 +23,9 @@ class Like {
 
   createLike(currentLikeBox) {
     $.ajax({
+      beforeSend: (xhr) => {
+        xhr.setRequestHeader('X-WP-Nonce', universityData.nonce);
+      },
       url: universityData.root_url + '/wp-json/university/v1/manageLike',
       type: 'POST',
       data: {
@@ -39,6 +42,9 @@ class Like {
   }
 
   deleteLike(currentLikeBox) {
+    beforeSend: (xhr) => {
+      xhr.setRequestHeader('X-WP-Nonce', universityData.nonce);
+    },
     $.ajax({
       url: universityData.root_url + '/wp-json/university/v1/manageLike',
       type: 'DELETE',

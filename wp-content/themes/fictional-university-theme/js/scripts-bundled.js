@@ -13947,6 +13947,9 @@ function () {
     key: "createLike",
     value: function createLike(currentLikeBox) {
       _jquery.default.ajax({
+        beforeSend: function beforeSend(xhr) {
+          xhr.setRequestHeader('X-WP-Nonce', universityData.nonce);
+        },
         url: universityData.root_url + '/wp-json/university/v1/manageLike',
         type: 'POST',
         data: {
@@ -13964,7 +13967,9 @@ function () {
   }, {
     key: "deleteLike",
     value: function deleteLike(currentLikeBox) {
-      _jquery.default.ajax({
+      beforeSend: (function (xhr) {
+        xhr.setRequestHeader('X-WP-Nonce', universityData.nonce);
+      }), _jquery.default.ajax({
         url: universityData.root_url + '/wp-json/university/v1/manageLike',
         type: 'DELETE',
         success: function success(response) {
