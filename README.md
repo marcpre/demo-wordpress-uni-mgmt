@@ -41,3 +41,15 @@ See minimum example below:
 ## Get Google Maps API Key
 
 Visit the [google maps api url](https://developers.google.com/maps/documentation/javascript/get-api-key) and click `Get API Key`
+
+# Deploying your website
+
+## Deploy with plugin
+
+1. Install the plugin `All-in-One WP Migration `
+2. Export as File
+3. On the new site, import the downloaded `*.wpress` file 
+
+## Deploy with git
+
+
